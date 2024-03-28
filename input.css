@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pacman-animation {
+  width: 100vw;
+  height: 50px; /* Adjust based on your needs */
+  position: relative;
+  overflow: hidden;
+}
+
+.pacman {
+  width: 0;
+  height: 0;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #1751f0; /* Changed to a more iconic Pac-Man yellow */
+  border-bottom: 25px solid #1751f0;
+  border-left: 25px solid #1751f0;
+  border-radius: 25px;
+  position: absolute;
+}
+
+.food {
+  width: 10px;
+  height: 10px;
+  background-color: #f18200;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+}

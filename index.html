@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BACMAN</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body class="press-start-2p-regular">
+    <div class="flex flex-col">
+      <!-- Logo image -->
+      <img
+        src="assets/logo.svg"
+        alt="Logo"
+        class="mx-auto max-w-[600px] w-full mt-16 px-4 md:px-0 mb-24"
+      />
+
+      <div class="pacman-animation">
+        <div class="pacman"></div>
+        <div class="food" style="left: 5%"></div>
+        <div class="food" style="left: 10%"></div>
+        <div class="food" style="left: 15%"></div>
+        <div class="food" style="left: 20%"></div>
+        <div class="food" style="left: 25%"></div>
+        <div class="food" style="left: 30%"></div>
+        <div class="food" style="left: 35%"></div>
+        <div class="food" style="left: 40%"></div>
+        <div class="food" style="left: 45%"></div>
+        <div class="food" style="left: 50%"></div>
+        <div class="food" style="left: 55%"></div>
+        <div class="food" style="left: 60%"></div>
+        <div class="food" style="left: 65%"></div>
+        <div class="food" style="left: 70%"></div>
+        <div class="food" style="left: 75%"></div>
+        <div class="food" style="left: 80%"></div>
+        <div class="food" style="left: 85%"></div>
+        <div class="food" style="left: 90%"></div>
+        <div class="food" style="left: 95%"></div>
+      </div>
+
+      <!-- Buttons -->
+      <div
+        class="flex flex-col md:flex-row mx-auto mt-32 gap-8 text-white w-full md:w-auto"
+      >
+        <div class="flex-1 mx-auto">
+          <a
+            class="bg-primaryOrange px-8 py-3 w-full text-center rounded-lg hover:bg-orange-600 transition cursor-pointer"
+            >Telegram</a
+          >
+        </div>
+        <div class="flex-1 mx-auto">
+          <a
+            class="bg-primaryOrange px-8 py-3 w-full text-center rounded-lg hover:bg-orange-600 transition cursor-pointer"
+            >Twitter</a
+          >
+        </div>
+        <div class="flex-1 mx-auto">
+          <a
+            class="bg-primaryOrange px-8 py-3 w-full text-center rounded-lg hover:bg-orange-600 transition cursor-pointer"
+            >Dexscreener</a
+          >
+        </div>
+      </div>
+      <div class="text-center mt-16 text-primaryBlue">
+        <p>CA: 0x00000000000000000000000</p>
+      </div>
+      <!-- Base logo and tokenomics -->
+      <div
+        class="md:mx-auto mt-16 bg-primaryBlue flex flex-col pt-16 pb-12 md:px-12 rounded-lg mx-4 mb-16"
+      >
+        <img src="assets/base-logo.svg" class="w-[200px] mx-auto" />
+        <div class="mx-auto text-white text-center my-8">
+          <p class="text-lg md:text-3xl mb-4">TOKEN SUPPLY</p>
+          <p class="text-lg md:text-3xl mb-4">1,000,000,000</p>
+          <p class="">
+            NO TAXES, LIQUIDITY BURNED, CONTRACT OWNERSHIP RENOUNCED
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
