@@ -526,8 +526,8 @@ Pacman.User = function (game, map) {
       centerY,
       radius
     );
-    gradient.addColorStop(0, "#8BB2F7"); // Inner color: bright yellow
-    gradient.addColorStop(1, "#0055F0"); // Outer color: orange
+    gradient.addColorStop(0, "#8BB2F7");
+    gradient.addColorStop(1, "#0055F0");
 
     ctx.fillStyle = gradient;
 
@@ -850,7 +850,7 @@ var PACMAN = (function () {
   }
 
   function dialog(text) {
-    ctx.fillStyle = "#FFFF00";
+    ctx.fillStyle = "#ffffff";
     ctx.font = "14px BDCartoonShoutRegular";
     var width = ctx.measureText(text).width,
       x = (map.width * map.blockSize - width) / 2;
@@ -932,7 +932,7 @@ var PACMAN = (function () {
     ctx.fillStyle = "#FFFF00";
 
     for (var i = 0, len = user.getLives(); i < len; i++) {
-      ctx.fillStyle = "#FFFF00";
+      ctx.fillStyle = "#1951ED";
       ctx.beginPath();
       ctx.moveTo(
         150 + 25 * i + map.blockSize / 2,
