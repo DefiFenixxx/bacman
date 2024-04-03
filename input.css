@@ -10,27 +10,26 @@
 
 .pacman-animation {
   width: 100vw;
-  height: 50px; /* Adjust based on your needs */
+  height: 100px; /* Adjust based on your needs */
   position: relative;
   overflow: hidden;
 }
 
 .pacman {
-  width: 0;
-  height: 0;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #1751f0; /* Changed to a more iconic Pac-Man yellow */
-  border-bottom: 25px solid #1751f0;
-  border-left: 25px solid #1751f0;
-  border-radius: 25px;
-  position: absolute;
+  width: 50px; /* or any size you want */
+  height: auto; /* maintains aspect ratio */
+  position: absolute; /* if you need it to be positioned similarly to the original Pac-Man */
+  /* add any other styling you need */
 }
 
 .food {
-  width: 10px;
-  height: 10px;
-  background-color: #f18200;
-  border-radius: 50%;
+  width: 60px;
   position: absolute;
-  top: 15px;
+}
+
+@media (max-width: 600px) {
+  .food {
+    width: 40px;
+    position: absolute;
+  }
 }

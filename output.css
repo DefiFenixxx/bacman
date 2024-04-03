@@ -554,19 +554,8 @@ video {
   --tw-contain-style:  ;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.absolute {
+  position: absolute;
 }
 
 .mx-4 {
@@ -574,45 +563,66 @@ video {
   margin-right: 1rem;
 }
 
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mb-16 {
   margin-bottom: 4rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
-.w-full {
-  width: 100%;
+.hidden {
+  display: none;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-\[200px\] {
   width: 200px;
 }
 
-.max-w-\[600px\] {
-  max-width: 600px;
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .flex-1 {
@@ -627,26 +637,20 @@ video {
   flex-direction: column;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .gap-8 {
   gap: 2rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.bg-primaryOrange {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 130 0 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-primaryBlue {
@@ -654,13 +658,13 @@ video {
   background-color: rgb(23 81 240 / var(--tw-bg-opacity));
 }
 
-.p-16 {
-  padding: 4rem;
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #90AEF7, #F1F8FF);
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-8 {
@@ -673,30 +677,16 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pt-16 {
   padding-top: 4rem;
 }
 
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
 .text-center {
   text-align: center;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -707,11 +697,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-primaryBlue {
-  --tw-text-opacity: 1;
-  color: rgb(23 81 240 / var(--tw-text-opacity));
 }
 
 .transition {
@@ -730,36 +715,37 @@ video {
 
 .pacman-animation {
   width: 100vw;
-  height: 50px;
+  height: 100px;
   /* Adjust based on your needs */
   position: relative;
   overflow: hidden;
 }
 
 .pacman {
-  width: 0;
-  height: 0;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #1751f0;
-  /* Changed to a more iconic Pac-Man yellow */
-  border-bottom: 25px solid #1751f0;
-  border-left: 25px solid #1751f0;
-  border-radius: 25px;
+  width: 50px;
+  /* or any size you want */
+  height: auto;
+  /* maintains aspect ratio */
   position: absolute;
+  /* if you need it to be positioned similarly to the original Pac-Man */
+  /* add any other styling you need */
 }
 
 .food {
-  width: 10px;
-  height: 10px;
-  background-color: #f18200;
-  border-radius: 50%;
+  width: 60px;
   position: absolute;
-  top: 15px;
 }
 
-.hover\:bg-orange-600:hover {
+@media (max-width: 600px) {
+  .food {
+    width: 40px;
+    position: absolute;
+  }
+}
+
+.hover\:bg-blue-500:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
@@ -768,21 +754,20 @@ video {
     margin-right: auto;
   }
 
-  .md\:mt-32 {
-    margin-top: 8rem;
+  .md\:block {
+    display: block;
   }
 
   .md\:w-auto {
     width: auto;
   }
 
-  .md\:flex-row {
-    flex-direction: row;
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
   }
 
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:px-12 {
@@ -793,17 +778,5 @@ video {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
-  }
-
-  .lg\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
   }
 }

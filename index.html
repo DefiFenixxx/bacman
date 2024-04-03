@@ -6,6 +6,7 @@
     <title>BACMAN</title>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="bacmanstyles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,47 +35,40 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body class="press-start-2p-regular">
+  <body class="press-start-2p-regular bg-gradient-to-b">
     <div class="flex flex-col">
       <!-- Logo image -->
-      <img
-        src="assets/logo.svg"
-        alt="Logo"
-        class="mx-auto max-w-[600px] w-full mt-16 px-4 md:px-0 mb-24"
-      />
+      <div class="flex items-center justify-center h-full mb-12 mt-24">
+        <img
+          src="assets/logo-transparent.svg"
+          alt="Logo"
+          class="max-w-[250px] md:max-w-[600px]"
+        />
+      </div>
+
+      <div class="text-center mx-auto mb-12">
+        <h2>EATING ALL THE BASE MEMES <BR>ONE BY ONE</h2>
+
+      </div>
 
       <div class="pacman-animation">
-        <div class="pacman"></div>
-        <div class="food" style="left: 5%"></div>
-        <div class="food" style="left: 10%"></div>
-        <div class="food" style="left: 15%"></div>
-        <div class="food" style="left: 20%"></div>
-        <div class="food" style="left: 25%"></div>
-        <div class="food" style="left: 30%"></div>
-        <div class="food" style="left: 35%"></div>
-        <div class="food" style="left: 40%"></div>
-        <div class="food" style="left: 45%"></div>
-        <div class="food" style="left: 50%"></div>
-        <div class="food" style="left: 55%"></div>
-        <div class="food" style="left: 60%"></div>
-        <div class="food" style="left: 65%"></div>
-        <div class="food" style="left: 70%"></div>
-        <div class="food" style="left: 75%"></div>
-        <div class="food" style="left: 80%"></div>
-        <div class="food" style="left: 85%"></div>
-        <div class="food" style="left: 90%"></div>
-        <div class="food" style="left: 95%"></div>
+        <img src="assets/bacman.png" alt="bacman" class="pacman" />
+        <img src="assets/degen.png" class="food" style="left: 10%"></img>
+        <img src="assets/mochi.png" class="food" style="left: 30%"></img>
+        <img src="assets/toshi.png" class="food" style="left: 50%"></img>
+        <img src="assets/normie.png" class="food" style="left: 70%"></img>
+        <img src="assets/mfer.png" class="food" style="left: 90%"></img>
       </div>
 
       <!-- Buttons -->
       <div
-        class="flex flex-col md:flex-row mx-auto mt-32 gap-8 text-white w-full md:w-auto"
+        class="flex flex-col md:flex-row mx-auto mt-16 gap-8 text-white w-full md:w-auto"
       >
         <div class="flex-1 mx-auto">
           <a
             href="https://t.me/BacManOnBase"
             target="_blank"
-            class="bg-primaryOrange px-8 py-3 w-full text-center rounded-lg hover:bg-orange-600 transition cursor-pointer"
+            class="bg-primaryBlue px-8 py-3 w-full text-center rounded-lg hover:bg-blue-500 transition cursor-pointer"
             >Telegram</a
           >
         </div>
@@ -82,7 +76,7 @@
           <a
             href="https://twitter.com/bacmanbase"
             target="_blank"
-            class="bg-primaryOrange px-8 py-3 w-full text-center rounded-lg hover:bg-orange-600 transition cursor-pointer"
+            class="bg-primaryBlue px-8 py-3 w-full text-center rounded-lg hover:bg-blue-500 transition cursor-pointer"
             >Twitter</a
           >
         </div>
@@ -90,16 +84,42 @@
           <a
             href="https://dexscreener.com/base/0x8a01975b7993e70debef344681ef49049aa95e3a"
             target="_blank"
-            class="bg-primaryOrange px-8 py-3 w-full text-center rounded-lg hover:bg-orange-600 transition cursor-pointer"
+            class="bg-primaryBlue px-8 py-3 w-full text-center rounded-lg hover:bg-blue-500 transition cursor-pointer"
             >Dexscreener</a
           >
         </div>
       </div>
-      <div class="text-center mt-16 text-primaryBlue">
-        <p class="hidden md:block text-sm">
-          CA: 0xc14C85318553202384398Fd6F76AdE6dcE8b630c
-        </p>
+      <!-- Game -->
+      <div class="hidden md:block mt-16">
+        <div class="w-[400px] mx-auto">
+          <!-- <img src="assets/logo-transparent.svg" alt="logo" class="logo" /> -->
+          <h2 class="text-center">THE GAME</h2>
+
+          <div id="pacman"></div>
+          <script src="pacman.js"></script>
+          <script src="modernizr-1.5.min.js"></script>
+
+          <script>
+            var el = document.getElementById("pacman");
+
+            if (
+              Modernizr.canvas &&
+              Modernizr.localstorage &&
+              Modernizr.audio &&
+              (Modernizr.audio.ogg || Modernizr.audio.mp3)
+            ) {
+              window.setTimeout(function () {
+                PACMAN.init(el, "./");
+              }, 0);
+            } else {
+              el.innerHTML =
+                "Sorry, needs a decent browser<br /><small>" +
+                "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+            }
+          </script>
+        </div>
       </div>
+
       <!-- Base logo and tokenomics -->
       <div
         class="md:mx-auto mt-16 bg-primaryBlue flex flex-col pt-16 pb-12 md:px-12 rounded-lg mx-4 mb-16"
