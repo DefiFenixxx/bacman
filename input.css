@@ -33,3 +33,10 @@
     position: absolute;
   }
 }
+
+.bg-custom {
+  background-image: url("assets/game-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

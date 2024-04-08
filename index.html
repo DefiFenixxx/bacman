@@ -89,40 +89,32 @@
           >
         </div>
       </div>
-      <!-- Game -->
-      <h2 class="text-center mt-16">THE GAME</h2>
-      <div class="flex flex-col sm:hidden mt-16 mx-4 text-center">
-        <h2 class="text-sm">PLAY THE BACMAN GAME ON DESKTOP</h2>
 
-      </div>
-      <div class="hidden sm:block">
-        <div class="w-[400px] mx-auto">
-          <!-- <img src="assets/logo-transparent.svg" alt="logo" class="logo" /> -->
-
-          <div id="pacman"></div>
-          <script src="pacman.js"></script>
-          <script src="modernizr-1.5.min.js"></script>
-
-          <script>
-            var el = document.getElementById("pacman");
-
-            if (
-              Modernizr.canvas &&
-              Modernizr.localstorage &&
-              Modernizr.audio &&
-              (Modernizr.audio.ogg || Modernizr.audio.mp3)
-            ) {
-              window.setTimeout(function () {
-                PACMAN.init(el, "./");
-              }, 0);
-            } else {
-              el.innerHTML =
-                "Sorry, needs a decent browser<br /><small>" +
-                "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
-            }
-          </script>
+      <div class="bg-black text-white flex flex-col mt-16 py-10 bg-custom">
+        <div class="max-w-[800px] mx-auto flex flex-col md:flex-row gap-8 md:gap-0">
+          <div class="flex flex-col md:items-start md:w-1/2">
+            <div class="flex flex-col text-center md:text-start">
+              <img src="assets/logo-transparent.svg" class="w-[230px] mx-auto" />
+              <h2 class="pl-3 uppercase text-xl text-center md:text-start">The Game</h2>
+            </div>
+            <div class="flex flex-col ml-3 mt-8">
+              <p class="text-sm leading-7 text-center md:text-start">BAC-MAN IS A WHIRLWIND OF MEME-MADNESS WHERE PLAYERS HELP BAC-MAN EVADE THE RELENTLESS GARY GENSLER AND THE MYSTERIOUS ANSEM IN A VIBRANT WORLD BRIMMING WITH DIGITAL CULTURE.</p>
+              <a href="https://game.bacman.xyz/" target="_blank" class="bg-primaryBlue text-center mx-auto md:mx-0 md:mr-auto py-4 px-6 rounded-lg mt-8 hover:bg-blue-500 transition cursor pointer">Play Now</a>
+            </div>
+          </div>
+          <div class="my-auto md:w-1/2">
+            <img src="assets/game-screenshot.png" class="mx-auto" />
+          </div>
         </div>
       </div>
+
+      <!-- Documentation -->
+
+      <div class="flex flex-col md:flex-row mx-auto pt-16 gap-4">
+        <h3 CLASS="uppercase text-center md:text-start">READ MORE ON OUR <br> DOCUMENTATION</h3>
+        <a class="px-8 py-4 bg-primaryBlue rounded-lg my-auto text-center transition hover:bg-blue-500 text-white" href="https://bacman.gitbook.io/bacman" target="_blank">READ MORE</a>
+      </div>
+      
 
       <!-- Base logo and tokenomics -->
       <div
